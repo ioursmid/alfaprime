@@ -1,0 +1,446 @@
+/* Bootstrap Theme Variables */
+:root {
+    --bs-primary: #0A0A0A;
+    --bs-secondary: #141414;
+    --bs-accent: #3B82F6;
+    --bs-success: #25D366;
+    --bs-dark: #000000;
+    --bs-body-color: #FFFFFF;
+    --bs-border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bs-dark);
+    color: var(--bs-body-color);
+    min-height: 100vh;
+}
+
+/* Container Adjustments */
+.container {
+    padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 2rem;
+    }
+}
+
+/* Navbar */
+.navbar {
+    background: transparent;
+    padding: 1.5rem 0;
+}
+
+/* Hero Section */
+.hero {
+    background: radial-gradient(circle at center, #141414 0%, #000000 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 6rem 0;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.hero .alert-info {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Products Section */
+.products {
+    background: linear-gradient(180deg, var(--bs-dark) 0%, #0A0A0A 100%);
+    padding-top: 5rem;
+}
+
+/* Cards */
+.card {
+    background: rgba(20, 20, 20, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.card-img-top {
+    background: transparent;
+    padding: 2rem;
+    max-height: 300px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .card-img-top {
+        padding: 1rem;
+        max-height: 200px;
+    }
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Product Specs */
+.list-unstyled li {
+    margin-bottom: 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.list-unstyled li i {
+    color: var(--bs-accent);
+    width: 20px;
+}
+
+/* Price Box */
+.price-box {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
+}
+
+.price-tag {
+    color: #FFFFFF;
+    font-size: 1.75rem;
+}
+
+/* WhatsApp Button */
+.btn-success {
+    background: var(--bs-success);
+    border: none;
+    padding: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+}
+
+.btn-success:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Timeline Section */
+.how-it-works {
+    background: linear-gradient(180deg, #0A0A0A 0%, var(--bs-dark) 100%);
+    position: relative;
+}
+
+.timeline-container {
+    padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        padding-left: 50px;
+        margin-bottom: 2rem;
+    }
+
+    .timeline-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+}
+
+/* Info Card */
+.info-card {
+    background: rgba(20, 20, 20, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .info-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* Feature List */
+.feature-list li {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Footer Styles */
+.footer {
+    background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.95) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.social-link {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: var(--bs-body-color);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--bs-accent);
+    color: var(--bs-dark);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 1.5rem 0;
+    }
+}
+
+/* Newsletter Form */
+.newsletter-form .form-control {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--bs-border-color);
+    color: var(--bs-body-color);
+    padding: 0.75rem;
+}
+
+/* Badges */
+.badge {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+}
+
+.badge.bg-primary {
+    background: var(--bs-accent) !important;
+}
+
+.badge.bg-warning {
+    background: #F59E0B !important;
+}
+
+/* Text Gradient */
+.text-gradient {
+    background: linear-gradient(135deg, #FFFFFF 0%, #3B82F6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Alert */
+.alert-info {
+    background: rgba(96, 165, 250, 0.1);
+    border: 1px solid var(--bs-accent);
+    color: #FFFFFF;
+}
+
+/* Section Spacing */
+section {
+    padding: 4rem 0;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 0;
+    }
+    
+    .display-6 {
+        font-size: 1.75rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+} 
+
+/* Text Colors and Sizes */
+.lead {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.text-muted {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.95rem;
+}
+
+/* Card Typography */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: white;
+}
+
+.list-unstyled li {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Price Box */
+.price-tag {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+/* Timeline Content */
+.timeline-content h3 {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Feature List */
+.feature-list li {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.feature-list li span {
+    margin-left: 0.5rem;
+}
+
+/* Alert Text */
+.alert-info {
+    color: white;
+    font-size: 1rem;
+}
+
+/* Badge Text */
+.badge {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Footer Text */
+.footer span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.footer .text-muted {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Section Headers */
+.display-6 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .lead {
+        font-size: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .list-unstyled li {
+        font-size: 0.95rem;
+    }
+
+    .price-tag {
+        font-size: 1.5rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.95rem;
+    }
+
+    .feature-list li {
+        font-size: 0.95rem;
+    }
+
+    .display-6 {
+        font-size: 2rem;
+    }
+
+    .alert-info {
+        font-size: 0.95rem;
+    }
+}
+
+/* Additional Contrast Improvements */
+.info-card-header h3 {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.btn-success {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Hero Section Text */
+.hero h1 {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero .alert-info {
+    font-weight: 500;
+} 
